@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestor de Tareas Interactivo</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      .error {
+        color: red;
+        font-weight: bold;
+        margin-top: 5px;
+      }
+      .completada {
+        text-decoration: line-through;
+        color: #777;
+      }
+      li {
+        margin-bottom: 8px;
+      }
+      button {
+        margin-left: 8px;
+        cursor: pointer;
+      }
+      .btn-borrar {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Lista de Tareas Interactiva</h1>
+
+    <form id="formTarea">
+      <input type="text" id="tituloTarea" placeholder="Escribe una tarea..." />
+      <select id="prioridadTarea">
+        <option value="Alta">Alta</option>
+        <option value="Media" selected>Media</option>
+        <option value="Baja">Baja</option>
+      </select>
+      <button type="submit">Agregar Tarea</button>
+    </form>
+    <p id="mensajeError" class="error"></p>
+
+    <h3>Filtrar tareas en tiempo real</h3>
+    <input type="text" id="filtroTarea" placeholder="Buscar tarea..." />
+
+    <h3>Mis Tareas</h3>
+    <ul id="listaTareas"></ul>
+
+    <script src="app.js"></script>
+  </body>
+</html>
